@@ -13,7 +13,7 @@ import pandas as pd
 app = dash.Dash(__name__)
 
 def fetch_financial_data(ticker):
- data = yf.download(ticker, start='2021-01-01', end='2023-01-01')
+ data = yf.download(ticker, start='2021-01-01', end='2024-01-01')
  data = data.reset_index()
  data = data[['Date', 'Open', 'Close', 'High', 'Low', 'Volume']]
  return data
